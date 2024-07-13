@@ -1,3 +1,4 @@
+import { AppRoutes } from "./presentation/routes"
 import { Server } from "./presentation/server"
 
 (async () => {
@@ -6,8 +7,9 @@ import { Server } from "./presentation/server"
 
 function main() {
     const server = new Server({
-        PORT: 8080,
-        PUBLIC_PATH: "./public"
+        port: 8080,
+        public_path: "./public",
+        routes: AppRoutes.routes
     })
     server.start()
 }
